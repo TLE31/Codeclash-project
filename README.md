@@ -29,6 +29,7 @@ This will start a development server, and you will be able to view the website o
 * Chat and Exchange Knowledge: Engage in conversations with other members to share insights and ideas, enhancing your learning experience.
 * Discussion Forum: Use our forum to discuss doubts, share information, and explore various topics related to hacking and cybersecurity.
 * Join Contests: Working on it
+* Intelligent Chatbot & Knowledge Exchange: Utilize our Gemini API-powered chatbot for real-time assistance and engage in vibrant discussions to share groundbreaking insights and innovative ideas.
 
 ### Contributing
 
