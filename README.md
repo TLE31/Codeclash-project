@@ -1,7 +1,7 @@
 # Codeclash
-### Social Media Community for Hackers
+### Social Media Community for Developers
 
-Welcome to our hacker community, a social platform designed for hackers worldwide. Here, you can test your skills, practice techniques, and connect with like-minded individuals. Join us for exploration, collaboration, and growth.
+Welcome to our developers community especially cyber security enthusiasts, a social platform designed for hackers developers. Here, you can test your skills, practice techniques, and connect with like-minded individuals. Join us for exploration, collaboration, and growth.
 
 ### Installation
 
