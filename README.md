@@ -40,7 +40,8 @@ I welcome contributions from the community. If you have an idea for a new featur
 * Clone the forked repository to your local machine using the git clone command:
 
 ```
-git clone https://github.com/<YOUR_USERNAME>/FlagRush.git
+git clone https://github.com/<YOUR_USERNAME>/Codeclash
+.git
 ```
 
 ```
