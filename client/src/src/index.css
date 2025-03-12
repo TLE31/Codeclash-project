@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #e85231;
+  --primary-hover: #d43e1d;
+  --primary-light: #fa9236;
+  --secondary: #22091b;
+  --secondary-light: #3a1530;
+  --background-light: #f8f9fa;
+  --background: #dadada;
+  --background-dark: #c8c8c8;
+  --success: #36fa57;
+  --success-dark: #18dc2f;
+  --info: #1e8bc3;
+  --info-dark: #16648c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #22091b;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a,
+Link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+@layer components {
+  .btn-cta-orange,
+  .active {
+    @apply flex justify-center items-center px-4 py-2 bg-primary-light rounded-md text-white font-medium transition-all duration-300 cursor-pointer hover:bg-primary hover:shadow-custom relative overflow-hidden;
+  }
+
+  .btn-cta-orange::before,
+  .active::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-white opacity-0 transition-opacity duration-300;
+  }
+
+  .btn-cta-orange:hover::before,
+  .active:hover::before {
+    @apply opacity-10;
+  }
+
+  .btn-cta-orange:active,
+  .active:active {
+    @apply transform scale-95;
+  }
+
+  .btn-cta-blue,
+  .active {
+    @apply flex justify-center items-center px-4 py-2 bg-primary rounded-md text-white font-medium transition-all duration-300 cursor-pointer hover:bg-primary-hover hover:shadow-custom relative overflow-hidden;
+  }
+
+  .btn-cta-blue::before,
+  .active::before {
+    @apply content-[''] absolute top-0 left-0 w-full h-full bg-white opacity-0 transition-opacity duration-300;
+  }
+
+  .btn-cta-blue:hover::before,
+  .active:hover::before {
+    @apply opacity-10;
+  }
+
+  .btn-cta-blue:active,
+  .active:active {
+    @apply transform scale-95;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-card p-4 transition-all duration-300 hover:shadow-custom border border-transparent hover:border-primary-light/30;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-secondary mb-4 relative;
+  }
+  
+  .section-title::after {
+    @apply content-[''] absolute bottom-0 left-0 w-16 h-1 bg-primary rounded-full;
+  }
+}
+
+.btn-cta-green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  background: #36fa57;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cta-green::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.btn-cta-green:hover::before {
+  left: 100%;
+}
+
+.btn-cta-green:hover {
+  background-color: #18dc2f;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.btn-cta-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  background: #fff;
+  border: 1.5px solid #1e8bc3;
+  border-radius: 5px;
+  color: #1e8bc3;
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn-cta-light:hover {
+  background-color: #16648c;
+  color: #fff;
+  border: 1.5px solid #fff;
+}
+
+.btn-round {
+  padding: 6px 12px;
+  color: #fff;
+  background: #16648c;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.btn-round:hover {
+  background: #e85231;
+}
+
+/* blue button */
+
+.btn-cta-blue,
+.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  background: #e85231;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn-cta-blue:hover,
+.active:hover {
+  background-color: #fc6645;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  background: #e85231;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+  border: 1.5px solid #e85231;
+}
+
+html {
+  --scrollbarBG: #f1f1f1;
+  --thumbBG: #e85231;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 10px;
+  border: 2px solid var(--scrollbarBG);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Glass morphism effect for cards */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Pulse animation for interactive elements */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(232, 82, 49, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(232, 82, 49, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(232, 82, 49, 0);
+  }
+}
+
+/* Fade in animation for page elements */
+.fade-in {
+  animation: fadeIn 0.5s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Staggered animation delays for lists */
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
+.stagger-item:nth-child(7) { animation-delay: 0.7s; }
+.stagger-item:nth-child(8) { animation-delay: 0.8s; }
+.stagger-item:nth-child(9) { animation-delay: 0.9s; }
+.stagger-item:nth-child(10) { animation-delay: 1s; }
