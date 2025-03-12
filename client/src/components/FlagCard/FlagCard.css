@@ -1,3 +1,45 @@
+/* Most styles are now handled by Tailwind classes in the JSX */
+
+.card {
+  position: relative;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styles for Material UI components */
+.MuiTextField-root {
+  width: 100%;
+  margin-bottom: 0.5rem !important;
+}
+
+.MuiInputBase-root {
+  background-color: #f8f9fa !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--primary) !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: var(--primary) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .card {
+    padding: 1rem;
+  }
+}
+
 .flagBox {
   display: flex;
   flex-direction: column;

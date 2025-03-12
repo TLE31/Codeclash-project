@@ -1,3 +1,46 @@
+/* Most styles are now handled by Tailwind classes in the JSX */
+
+/* Custom styles for Material UI components */
+.MuiTextField-root {
+  width: 100%;
+  margin-bottom: 1rem !important;
+}
+
+.MuiInputBase-root {
+  background-color: #f8f9fa !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--primary) !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: var(--primary) !important;
+}
+
+/* Animation for cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.transform {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container-custom {
+    padding: 1rem;
+  }
+}
+
 .flag-flex {
   display: flex;
   flex-direction: column;

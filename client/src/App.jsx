@@ -13,6 +13,8 @@ import Error from "./pages/Error/Error";
 import FutureScope from "./pages/Error/FutureScope";
 import Reports from "./pages/Reports/Reports";
 import Home from "./pages/Home/Home";
+import Settings from "./pages/Settings/Settings";
+import Bookmarks from "./pages/Bookmarks/Bookmarks";
 
 function App() {
   return (
@@ -30,6 +32,12 @@ function App() {
         <Route path="social" element={<Social />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="profile/:slug" element={<Me />} />
+        <Route path="profile/:slug/friends" element={<Me />} />
+        <Route path="profile/:slug/discussions" element={<Me />} />
+        <Route path="profile/:slug/bookmarks" element={<Me />} />
+        <Route path="profile/:slug/settings" element={<Me />} />
+        <Route path="bookmarks" element={<Bookmarks />} />
+        <Route path="settings" element={<Settings />} />
         <Route path="future-scope" element={<FutureScope />} />
         <Route path="*" element={<Error />} />
       </Routes>

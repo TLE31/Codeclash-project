@@ -1,45 +1,82 @@
-.leader-box {
-  height: 50vh;
-  width: 370px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 15px;
-  gap: 10px;
-  background: #fff;
-  color: #000;
-  border: 1px solid #434343;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
-  border-radius: 6px;
-  overflow-y: scroll;
+/* Most styles are now handled by Tailwind classes in the JSX */
+
+.leaderboard-container {
+  max-height: 500px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) #f1f1f1;
+  padding-right: 5px;
 }
 
-.leader-div {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.leaderboard-container::-webkit-scrollbar {
+  width: 6px;
 }
-.leaderCard {
+
+.leaderboard-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.leaderboard-container::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+.leaderboard-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-hover);
+}
+
+.leaderboard-card {
   display: flex;
-  margin-top: 20px;
-  width: 300px;
   justify-content: space-between;
   align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-.leader-name {
-  color: #000;
+.leaderboard-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: transparent;
+  transition: all 0.3s ease;
 }
 
-.leaderCard img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+.leaderboard-card:hover::before {
+  background: var(--primary-light);
 }
 
-.leaderCard-profile {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+.leaderboard-card.highlighted {
+  background-color: rgba(232, 82, 49, 0.05);
+}
+
+.leaderboard-card:nth-child(1) {
+  background: linear-gradient(to right, rgba(255, 215, 0, 0.05), transparent);
+}
+
+.leaderboard-card:nth-child(2) {
+  background: linear-gradient(to right, rgba(192, 192, 192, 0.05), transparent);
+}
+
+.leaderboard-card:nth-child(3) {
+  background: linear-gradient(to right, rgba(205, 127, 50, 0.05), transparent);
+}
+
+@media (max-width: 640px) {
+  .leaderboard-container {
+    max-height: 400px;
+  }
+  
+  .leaderboard-card {
+    padding: 0.5rem 0.75rem;
+  }
 }
