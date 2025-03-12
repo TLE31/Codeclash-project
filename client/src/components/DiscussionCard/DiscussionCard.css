@@ -4,11 +4,18 @@
   align-items: flex-start;
   padding: 18px 20px;
   gap: 14px;
-  width: 590px;
+  width: 100%;
   background: #fff;
   border: 1px solid #e85231;
   border-radius: 7px;
   color: #000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.discussion-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
 .discussion-card-content {
@@ -16,24 +23,26 @@
   align-items: center;
   justify-content: space-between;
   gap: 36px;
-  width: 550px;
+  width: 100%;
 }
 
 .discussion-card-ques {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 357px;
+  width: 100%;
 }
 
 .discussion-card-text {
   font-size: 14px;
-  }
+  color: #666;
+}
 
 .discussion-card-question {
   font-weight: 500;
   font-size: 18px;
   line-height: 25px;
+  color: #333;
 }
 
 .discussion-card-ques div {
@@ -43,7 +52,7 @@
 }
 
 .discussion-card-line {
-  width: 550px;
+  width: 100%;
   border: 1px solid #e85231;
 }
 
@@ -57,13 +66,14 @@
   width: 28px;
   border-radius: 50%;
   border: 0.5px solid #e85231;
+  object-fit: cover;
 }
 
 .discussion-card-datas {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 550px;
+  width: 100%;
   align-items: center;
   gap: 10px;
 }

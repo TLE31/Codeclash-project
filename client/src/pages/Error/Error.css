@@ -1,18 +1,149 @@
-.error {
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, rgba(232, 82, 49, 0.1) 100%);
+  padding: 2rem;
+}
+
+.error-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.error-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  margin-top: 70px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 3rem 2rem;
 }
 
-.error h1 {
-  font-size: 30px;
-  color: #dc7418;
+.error-image-container {
+  margin-bottom: 2rem;
+  max-width: 100%;
 }
 
-.error img {
-  height: 500px;
-  margin-bottom: 40px;
+.error-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.error-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #e85231, #ff8c42);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.error-redirect {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.countdown {
+  font-weight: 700;
+  color: #e85231;
+  font-size: 1.2rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.back-button,
+.home-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.back-button {
+  background: transparent;
+  color: #666;
+  border: 1px solid #ddd;
+}
+
+.back-button:hover {
+  background: #f5f5f5;
+  border-color: #ccc;
+}
+
+.home-button {
+  background: linear-gradient(90deg, #e85231, #ff8c42);
+  color: white;
+}
+
+.home-button:hover {
+  box-shadow: 0 4px 12px rgba(232, 82, 49, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .error-title {
+    font-size: 2rem;
+  }
+  
+  .error-message {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .error-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .error-title {
+    font-size: 1.75rem;
+  }
+  
+  .error-message {
+    font-size: 1rem;
+  }
+  
+  .error-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .back-button,
+  .home-button {
+    width: 100%;
+    justify-content: center;
+  }
 }
